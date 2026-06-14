@@ -1,0 +1,187 @@
+(venv) PS H:\my_summer_projects\interview-weakness-detector> python main.py
+
+Sessions completed so far: 0
+
+=== Interview Weakness Detector ===
+Answer each question like a real interview. Type your answer and press Enter twice.
+
+
+Q1 [Behavioral]: Tell me about yourself.
+Your answer (press Enter twice when done):
+My name is Ram. I am a hardworking and enthusiastic person who enjoys learning new things and improving my skills. I am passionate about technology and always eager to explore innovative ideas. In my free time, I like reading, playing sports, and spending time with my friends and family. I believe in teamwork, honesty, and continuous self-improvement. My goal is to build a successful career while making a positive impact on society.Thank you.
+
+
+Evaluating...
+
+--- Feedback ---
+  Clarity      4.0
+  Specificity  2.0
+  Relevance    4.0
+  Structure    2.0
+  Impact       3.0
+
+  Overall: 3.2
+
+  Strengths: Good introduction to the candidate's personality and values
+  Weakness: Lack of concrete examples or specific skills
+  Tip: Use the STAR format to structure the answer and provide specific examples of skills and achievements
+
+Q2 [Behavioral]: What is your greatest weakness?
+Your answer (press Enter twice when done):
+I sometimes spend extra time perfecting my work, but I am learning to manage time efficiently by setting deadlines and priorities.
+
+
+Evaluating...
+
+--- Feedback ---
+  Clarity      4.5
+  Specificity  3.0
+  Relevance    4.0
+  Structure    4.0
+  Impact       3.0
+
+  Overall: 3.8
+
+  Strengths: Attention to detail
+  Weakness: Perfectionism
+  Tip: Practice articulating weaknesses in a way that shows self-awareness and a proactive approach to improvement, such as 'I've noticed I tend to overthink tasks, so I'm working on setting clear deadlines and prioritizing tasks to stay on track'.
+
+Q3 [Behavioral]: Describe a challenge you overcame at work.
+Your answer (press Enter twice when done):
+While working on my project, we faced issues with real-time data synchronization between the IoT device and the cloud. I collaborated with my team to troubleshoot the problem, optimize the implementation, and improve data reliability. The challenge helped me strengthen my problem-solving skills and taught me the value of teamwork and continuous learning.
+
+
+Evaluating...
+
+--- Feedback ---
+  Clarity      4.5
+  Specificity  3.5
+  Relevance    5.0
+  Structure    3.5
+  Impact       3.5
+
+  Overall: 3.9
+
+  Strengths: Good use of teamwork and continuous learning as learning points
+  Weakness: Lack of concrete details about the problem-solving process
+  Tip: When describing challenges, try to include specific details about the problem-solving process, such as the steps taken, the tools used, and the outcomes achieved.
+
+=== Session Complete ===
+
+Focus next on: SPECIFICITY
+Run again tomorrow to track your 30-day progress!
+
+Updated
+(venv) PS H:\my_summer_projects\interview-weakness-detector> python main.py
+
+Total sessions completed: 1
+
+=== Interview Weakness Detector ===
+Let's personalise your session.
+
+What role are you preparing for? (e.g. Python Developer, Data Analyst): Data Analyst
+Experience level? (Fresher / 1-2 years / 3-5 years): Fresher
+Any focus area? (e.g. Behavioral, System Design, General): General
+How many questions this session? (1-10): 2
+
+Generating your personalised questions...
+
+4 questions ready. Let's begin!
+
+
+Q1 [Behavioral]: Tell me about a time when you had to communicate complex data insights to a non-technical stakeholder. How did you approach the situation and what was the outcome?
+Your answer (press Enter twice when done):
+During one of my academic projects, I analyzed data related to phishing website detection using machine learning. After completing the analysis, I had to present the results to faculty members who were not deeply familiar with technical concepts like machine learning models, accuracy metrics, and feature extraction.To make the insights easy to understand, I avoided technical jargon and used simple visualizations such as charts and graphs. Instead of discussing model algorithms in detail, I explained the results in terms of real-world impact, such as how the system could help users identify fraudulent websites and improve online security. I also used practical examples to demonstrate how the model worked.As a result, the stakeholders were able to clearly understand the project's value and effectiveness. The presentation was well received, and I gained confidence in communicating technical information to non-technical audiences."This answer demonstrates communication skills, problem-solving ability, and the capability to bridge the gap between technical and non-technical stakeholders, which interviewers look for.
+
+
+Evaluating...
+
+--- Your Scores ---
+  Clarity      4.5
+  Specificity  4.0
+  Relevance    5.0
+  Structure    4.0
+  Impact       4.0
+
+  Overall: 4.2
+
+  ✅ Strength: The candidate provides a clear and relatable example from their academic project.
+  ❌ Weakness: The answer could benefit from more specific details about the data insights and the non-technical stakeholders' feedback.
+  💡 Tip: To improve the answer, focus on providing more specific details about the data insights and the non-technical stakeholders' feedback, and consider using a more concise format to directly address the outcome.
+
+--- Ideal Answer ---
+In my previous role at XYZ Corporation, I had to present complex data insights on customer behavior to a non-technical marketing team. To make the insights accessible, I created interactive visualizations and used analogies to explain the data in simple terms. For instance, I compared the customer churn rate to a 'leaky bucket' to help the team understand the concept of retention. The presentation was well-received, and the team was able to make data-driven decisions to improve customer engagement. As a result, we saw a 25% increase in customer retention within the next quarter.
+
+Q2 [Situational]: If you were given a large dataset with missing values and outliers, how would you approach cleaning and preprocessing it for analysis?
+Your answer (press Enter twice when done):
+If I were given a large dataset with missing values and outliers, my first step would be to understand the data by performing exploratory data analysis. I would identify missing values, duplicate records, inconsistent formats, and outliers using statistical summaries and visualizations.For missing values, I would decide whether to remove them or replace them using techniques such as mean, median, mode, or interpolation, depending on the nature of the data. For outliers, I would investigate whether they are genuine observations or errors. If they are errors, I would remove or correct them; otherwise, I would use appropriate methods such as capping or transformation to reduce their impact.Next, I would handle duplicate records, standardize data formats, encode categorical variables if needed, and normalize or scale numerical features. Finally, I would validate the cleaned dataset to ensure data quality before proceeding with analysis or model building.This approach helps ensure that the analysis is accurate, reliable, and free from misleading results caused by poor data quality.
+
+
+Evaluating...
+
+--- Your Scores ---
+  Clarity      4.5
+  Specificity  4.0
+  Relevance    5.0
+  Structure    4.0
+  Impact       4.0
+
+  Overall: 4.2
+
+  ✅ Strength: Clearly explains the importance of data quality and exploratory data analysis
+  ❌ Weakness: Lack of concrete examples for handling missing values and outliers
+  💡 Tip: Use real-world examples to illustrate how you handled missing values and outliers in a previous project
+
+--- Ideal Answer ---
+When faced with a large dataset containing missing values and outliers, I recall a project where I worked with a team to analyze customer purchase behavior. We started by performing exploratory data analysis to identify missing values, duplicate records, and outliers. For missing values, we decided to use mean imputation for numerical features and mode imputation for categorical features. For outliers, we investigated their nature and removed them if they were errors. We then standardized data formats, encoded categorical variables, and normalized numerical features using the Min-Max Scaler. Finally, we validated the cleaned dataset to ensure data quality before proceeding with analysis or model building. This approach helped us identify key trends in customer behavior and inform business decisions.
+
+Q3 [Technical]: What is your understanding of data normalization and how would you apply it to a dataset with different scales of measurement?
+Your answer (press Enter twice when done):
+Data normalization is the process of scaling numerical values to a common range so that features with larger values do not dominate those with smaller values. For a dataset with different scales, such as age, salary, and experience, I would use normalization techniques like Min-Max Scaling or Standardization to bring all features to a similar scale. This helps improve the performance and accuracy of data analysis and machine learning models.
+
+
+Evaluating...
+
+--- Your Scores ---
+  Clarity      4.5
+  Specificity  4.0
+  Relevance    5.0
+  Structure    3.0
+  Impact       3.5
+
+  Overall: 4.0
+
+  ✅ Strength: Provides a clear and concise definition of data normalization
+  ❌ Weakness: Lack of concrete example to illustrate the application of normalization techniques
+  💡 Tip: When answering this question, try to provide a specific example of a dataset with different scales and explain how you would apply normalization techniques to it, using the STAR format to structure your answer.
+
+--- Ideal Answer ---
+Here's an example of how I would answer this question using the STAR format: 'In my previous role, I worked with a dataset that contained features with different scales, such as age, salary, and experience. To normalize this dataset, I used Min-Max Scaling to bring all features to a similar scale. This helped improve the performance of our machine learning model by reducing the impact of features with larger values. For instance, after normalization, the age feature, which had a range of 20-80, was scaled to a range of 0-1, allowing the model to focus on the relative differences between ages rather than the absolute values. This approach resulted in a 20% improvement in model accuracy.'
+
+Q4 [Strength/Weakness]: What do you think are your greatest strengths and weaknesses as a data analyst, and how do you think they will impact your performance in this role?
+Your answer (press Enter twice when done):
+My greatest strength as a data analyst is my analytical mindset and attention to detail. I enjoy working with data, identifying patterns, and solving problems. I am also quick to learn new tools and technologies, which helps me adapt to different projects.One of my weaknesses is that I sometimes spend extra time ensuring my analysis is accurate and complete. However, I am improving this by prioritizing tasks effectively and managing my time better.I believe my strengths will help me deliver reliable insights, while continuously working on my 
+weakness will make me more efficient in this role.
+
+
+Evaluating...
+
+--- Your Scores ---
+  Clarity      4.5
+  Specificity  4.0
+  Relevance    4.5
+  Structure    3.5
+  Impact       3.5
+
+  Overall: 4.0
+
+  ✅ Strength: analytical mindset
+  ❌ Weakness: spending extra time ensuring analysis is accurate and complete
+  💡 Tip: Consider using specific examples from past experiences to demonstrate how your strengths and weaknesses have impacted your performance in previous roles.
+
+--- Ideal Answer ---
+One of my greatest strengths as a data analyst is my analytical mindset, which has allowed me to identify patterns and solve complex problems in previous roles. For instance, in my previous position at XYZ Corporation, I used data analysis to increase sales by 15% within a quarter. However, I recognize that my attention to detail can sometimes lead to spending extra time ensuring my analysis is accurate and complete. To address this, I've been working on prioritizing tasks effectively and managing my time better, which has helped me deliver high-quality results while meeting deadlines. I believe my strengths will enable me to deliver reliable insights, while continuously working on my weakness will make me more efficient in this role.
+
+=== Session Complete ===
+  Focus next on: STRUCTURE
+  Sessions completed so far: 2

@@ -1,0 +1,7 @@
+.env
+venv/
+__pycache__/
+*.pyc
+interview_coach.db
+sessions.json
+.streamlit/secrets.toml
