@@ -4,7 +4,8 @@ import json
 import os
 from datetime import datetime
 
-DB_PATH = "interview_coach.db"
+import os
+DB_PATH = os.path.join("/tmp", "interview_coach.db")
 
 def get_conn():
     conn = sqlite3.connect(DB_PATH)
