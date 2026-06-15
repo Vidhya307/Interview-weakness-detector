@@ -100,31 +100,6 @@ p, label, .stMarkdown { color: #A8A8C0; }
 </style>
 """, unsafe_allow_html=True)
 
-st.markdown("""
-<div style="
-    position: fixed;
-    bottom: 20px;
-    left: 16px;
-    z-index: 999999;
-    background: #5F01FB;
-    border-radius: 50%;
-    width: 44px;
-    height: 44px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 20px;
-    cursor: pointer;
-    box-shadow: 0 4px 15px rgba(95,1,251,0.4);
-" onclick="
-    const sidebar = window.parent.document.querySelector('[data-testid=stSidebar]');
-    const btn = window.parent.document.querySelector('[data-testid=collapsedControl]');
-    if(btn) btn.click();
-" title="Open Menu">
-    ☰
-</div>
-""", unsafe_allow_html=True)
-
 # ── Auth gate ─────────────────────────────────────────────
 if "user" not in st.session_state:
     st.session_state.user = None
