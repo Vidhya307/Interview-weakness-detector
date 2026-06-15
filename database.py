@@ -4,38 +4,35 @@ import json
 import os
 from datetime import datetime
 
-import os
 DB_PATH = os.path.join("/tmp", "interview_coach.db")
 
 def get_conn():
     conn = sqlite3.connect(DB_PATH)
     conn.row_factory = sqlite3.Row
-    return conn
-
-def init_db():
-    conn = get_conn()
     conn.executescript("""
         CREATE TABLE IF NOT EXISTS users (
             id         INTEGER PRIMARY KEY AUTOINCREMENT,
             username   TEXT UNIQUE NOT NULL,
-            email      TEXT UNIQUE,
+            email      TEXT,
             password   TEXT NOT NULL,
             created_at TEXT DEFAULT CURRENT_TIMESTAMP
         );
-
         CREATE TABLE IF NOT EXISTS sessions (
             id         INTEGER PRIMARY KEY AUTOINCREMENT,
             user_id    INTEGER NOT NULL,
             date       TEXT NOT NULL,
             role       TEXT,
             mode       TEXT DEFAULT 'practice',
-            avg_scores TEXT NOT NULL,
-            results    TEXT NOT NULL,
+            avg_scores TEXT NOT NULL DEFAULT '{}',
+            results    TEXT NOT NULL DEFAULT '[]',
             FOREIGN KEY (user_id) REFERENCES users(id)
         );
     """)
     conn.commit()
-    conn.close()
+    return conn
+
+def init_db():
+    get_conn()
 
 def hash_pw(password):
     return hashlib.sha256(password.encode()).hexdigest()
@@ -57,8 +54,6 @@ def register_user(username, email, password):
     except sqlite3.IntegrityError as e:
         if "username" in str(e):
             return False, "Username already taken."
-        if "email" in str(e):
-            return False, "Email already registered."
         return False, "Registration failed."
 
 def login_user(username, password):
@@ -120,9 +115,5 @@ def get_weakest_dim(user_id):
     avgs = {d: totals[d] / count for d in dims}
     return min(avgs, key=avgs.get)
 
-def delete_account(user_id):
-    conn = get_conn()
-    conn.execute("DELETE FROM sessions WHERE user_id = ?", (user_id,))
-    conn.execute("DELETE FROM users WHERE id = ?", (user_id,))
-    conn.commit()
-    conn.close()
+def get_conn_raw():
+    return get_conn()
