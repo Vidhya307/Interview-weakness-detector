@@ -28,6 +28,13 @@ st.set_page_config(page_title="Interview Coach AI", page_icon="🎯", layout="wi
 # ── Global styles ─────────────────────────────────────────
 st.markdown("""
 <style>
+#MainMenu { visibility: hidden; }
+[data-testid="stToolbar"] { visibility: hidden; }
+[data-testid="stDecoration"] { display: none; }
+[data-testid="stStatusWidget"] { display: none; }
+[data-testid="stBottom"] { display: none; }
+footer { visibility: hidden; }
+.stDeployButton { display: none; }
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
 html, body, [class*="css"] { font-family: 'Inter', sans-serif; }
 
@@ -37,9 +44,6 @@ html, body, [class*="css"] { font-family: 'Inter', sans-serif; }
     background: #12152A !important;
     border-right: 1px solid #2A2D4A;
 }
-/* Hide the GitHub icon from the top bar */
-[data-testid="stToolbar"] {
-    visibility: hidden;
 }
 [data-testid="metric-container"] {
     background: #181C33;
