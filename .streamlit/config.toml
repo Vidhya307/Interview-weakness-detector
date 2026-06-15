@@ -11,4 +11,4 @@ toolbarMode = "minimal"
 gatherUsageStats = false
 
 [ui]
-hideSidebarNav =  true
+hideSidebarNav =  "minimal"
