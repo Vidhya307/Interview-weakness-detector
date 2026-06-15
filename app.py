@@ -28,13 +28,24 @@ st.set_page_config(page_title="Interview Coach AI", page_icon="🎯", layout="wi
 # ── Global styles ─────────────────────────────────────────
 st.markdown("""
 <style>
-#MainMenu { visibility: hidden; }
-[data-testid="stToolbar"] { visibility: hidden; }
-[data-testid="stDecoration"] { display: none; }
-[data-testid="stStatusWidget"] { display: none; }
-[data-testid="stBottom"] { display: none; }
-footer { visibility: hidden; }
-.stDeployButton { display: none; }
+/* Hide ALL Streamlit branding and toolbar */
+#MainMenu {visibility: hidden !important;}
+header {visibility: hidden !important;}
+footer {visibility: hidden !important;}
+[data-testid="stToolbar"] {display: none !important;}
+[data-testid="stDecoration"] {display: none !important;}
+[data-testid="stStatusWidget"] {display: none !important;}
+[data-testid="stToolbarActions"] {display: none !important;}
+.stDeployButton {display: none !important;}
+[data-testid="baseButton-headerNoPadding"] {display: none !important;}
+
+/* Hide bottom right floating buttons (the ones circled) */
+.st-emotion-cache-zq5wmm {display: none !important;}
+.st-emotion-cache-1wbqy5l {display: none !important;}
+[class*="StatusWidget"] {display: none !important;}
+[class*="viewerBadge"] {display: none !important;}
+#GithubIcon {display: none !important;}
+]
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
 html, body, [class*="css"] { font-family: 'Inter', sans-serif; }
 
