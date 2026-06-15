@@ -49,16 +49,7 @@ footer {visibility: hidden !important;}
 [class*="StatusWidget"] {display: none !important;}
 [class*="viewerBadge"] {display: none !important;}
 #GithubIcon {display: none !important;}
-
-/* Show hamburger menu on mobile even though header is hidden */
-@media (max-width: 768px) {
-    header {visibility: visible !important;}
-    [data-testid="stToolbar"] {display: none !important;}
-    [data-testid="stToolbarActions"] {display: none !important;}
-    .stDeployButton {display: none !important;}
-    [data-testid="collapsedControl"] {visibility: visible !important; display: block !important;}
-}
-
+]
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
 html, body, [class*="css"] { font-family: 'Inter', sans-serif; }
 
