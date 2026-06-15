@@ -27,29 +27,70 @@ st.set_page_config(
     page_title="Interview Coach AI",
     page_icon="🎯",
     layout="wide",
-    initial_sidebar_state="expanded"  # ← add this
+    initial_sidebar_state="expanded"
 )
 # ── Global styles ─────────────────────────────────────────
 st.markdown("""
 <style>
-/* Hide ALL Streamlit branding and toolbar */
-#MainMenu {visibility: hidden !important;}
-header {visibility: hidden !important;}
-footer {visibility: hidden !important;}
+/* Hide header but keep the sidebar toggle button visible */
+header[data-testid="stHeader"] {
+    background: transparent !important;
+    height: 0px !important;
+}
+
+/* Keep ONLY the sidebar collapse/expand button visible */
+[data-testid="collapsedControl"] {
+    display: flex !important;
+    visibility: visible !important;
+    position: fixed !important;
+    top: 8px !important;
+    left: 8px !important;
+    z-index: 999999 !important;
+    background: #12152A !important;
+    border: 1px solid #2A2D4A !important;
+    border-radius: 8px !important;
+    width: 36px !important;
+    height: 36px !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+[data-testid="stSidebarCollapsedControl"] {
+    display: flex !important;
+    visibility: visible !important;
+    position: fixed !important;
+    top: 8px !important;
+    left: 8px !important;
+    z-index: 999999 !important;
+    background: #12152A !important;
+    border: 1px solid #5F01FB !important;
+    border-radius: 8px !important;
+    padding: 4px !important;
+}
+
+/* Hide everything else in the header */
 [data-testid="stToolbar"] {display: none !important;}
+[data-testid="stToolbarActions"] {display: none !important;}
 [data-testid="stDecoration"] {display: none !important;}
 [data-testid="stStatusWidget"] {display: none !important;}
-[data-testid="stToolbarActions"] {display: none !important;}
 .stDeployButton {display: none !important;}
-[data-testid="baseButton-headerNoPadding"] {display: none !important;}
-
-/* Hide bottom right floating buttons (the ones circled) */
-.st-emotion-cache-zq5wmm {display: none !important;}
-.st-emotion-cache-1wbqy5l {display: none !important;}
-[class*="StatusWidget"] {display: none !important;}
 [class*="viewerBadge"] {display: none !important;}
-#GithubIcon {display: none !important;}
-]
+footer {visibility: hidden !important;}
+#MainMenu {visibility: hidden !important;}
+
+/* Mobile specific */
+@media (max-width: 768px) {
+    [data-testid="collapsedControl"] {
+        top: 6px !important;
+        left: 6px !important;
+        width: 40px !important;
+        height: 40px !important;
+    }
+    [data-testid="stSidebarCollapsedControl"] {
+        top: 6px !important;
+        left: 6px !important;
+    }
+}
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
 html, body, [class*="css"] { font-family: 'Inter', sans-serif; }
 
@@ -98,6 +139,31 @@ hr { border-color: #2A2D4A !important; }
 h1, h2, h3 { color: #FFFFFF !important; }
 p, label, .stMarkdown { color: #A8A8C0; }
 </style>
+""", unsafe_allow_html=True)
+
+st.markdown("""
+<div style="
+    position: fixed;
+    bottom: 20px;
+    left: 16px;
+    z-index: 999999;
+    background: #5F01FB;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(95,1,251,0.4);
+" onclick="
+    const sidebar = window.parent.document.querySelector('[data-testid=stSidebar]');
+    const btn = window.parent.document.querySelector('[data-testid=collapsedControl]');
+    if(btn) btn.click();
+" title="Open Menu">
+    ☰
+</div>
 """, unsafe_allow_html=True)
 
 # ── Auth gate ─────────────────────────────────────────────
