@@ -54,6 +54,13 @@ def show_login_page():
                     else:
                         st.error(msg)
 
+st.markdown("""
+<div style="text-align:center;margin-top:20px;padding:10px;
+background:#1f2937;border-radius:8px;font-size:13px;color:#9ca3af">
+    📱 On mobile — tap <b style="color:#a78bfa">☰</b> in the top left to open the menu
+</div>
+""", unsafe_allow_html=True)
+
 def logout():
     st.session_state.user = None
     st.rerun()

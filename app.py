@@ -23,8 +23,12 @@ def get_secret(key):
     except:
         return os.getenv(key, "")
 
-st.set_page_config(page_title="Interview Coach AI", page_icon="🎯", layout="wide")
-
+st.set_page_config(
+    page_title="Interview Coach AI",
+    page_icon="🎯",
+    layout="wide",
+    initial_sidebar_state="expanded"  # ← add this
+)
 # ── Global styles ─────────────────────────────────────────
 st.markdown("""
 <style>
