@@ -37,6 +37,10 @@ html, body, [class*="css"] { font-family: 'Inter', sans-serif; }
     background: #12152A !important;
     border-right: 1px solid #2A2D4A;
 }
+/* Hide the GitHub icon from the top bar */
+[data-testid="stToolbar"] {
+    visibility: hidden;
+}
 [data-testid="metric-container"] {
     background: #181C33;
     border: 1px solid #2A2D4A;
