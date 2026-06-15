@@ -27,70 +27,29 @@ st.set_page_config(
     page_title="Interview Coach AI",
     page_icon="🎯",
     layout="wide",
-    initial_sidebar_state="expanded"
+    initial_sidebar_state="expanded"  # ← add this
 )
 # ── Global styles ─────────────────────────────────────────
 st.markdown("""
 <style>
-/* Hide header but keep the sidebar toggle button visible */
-header[data-testid="stHeader"] {
-    background: transparent !important;
-    height: 0px !important;
-}
-
-/* Keep ONLY the sidebar collapse/expand button visible */
-[data-testid="collapsedControl"] {
-    display: flex !important;
-    visibility: visible !important;
-    position: fixed !important;
-    top: 8px !important;
-    left: 8px !important;
-    z-index: 999999 !important;
-    background: #12152A !important;
-    border: 1px solid #2A2D4A !important;
-    border-radius: 8px !important;
-    width: 36px !important;
-    height: 36px !important;
-    align-items: center !important;
-    justify-content: center !important;
-}
-
-[data-testid="stSidebarCollapsedControl"] {
-    display: flex !important;
-    visibility: visible !important;
-    position: fixed !important;
-    top: 8px !important;
-    left: 8px !important;
-    z-index: 999999 !important;
-    background: #12152A !important;
-    border: 1px solid #5F01FB !important;
-    border-radius: 8px !important;
-    padding: 4px !important;
-}
-
-/* Hide everything else in the header */
+/* Hide ALL Streamlit branding and toolbar */
+#MainMenu {visibility: hidden !important;}
+header {visibility: hidden !important;}
+footer {visibility: hidden !important;}
 [data-testid="stToolbar"] {display: none !important;}
-[data-testid="stToolbarActions"] {display: none !important;}
 [data-testid="stDecoration"] {display: none !important;}
 [data-testid="stStatusWidget"] {display: none !important;}
+[data-testid="stToolbarActions"] {display: none !important;}
 .stDeployButton {display: none !important;}
-[class*="viewerBadge"] {display: none !important;}
-footer {visibility: hidden !important;}
-#MainMenu {visibility: hidden !important;}
+[data-testid="baseButton-headerNoPadding"] {display: none !important;}
 
-/* Mobile specific */
-@media (max-width: 768px) {
-    [data-testid="collapsedControl"] {
-        top: 6px !important;
-        left: 6px !important;
-        width: 40px !important;
-        height: 40px !important;
-    }
-    [data-testid="stSidebarCollapsedControl"] {
-        top: 6px !important;
-        left: 6px !important;
-    }
-}
+/* Hide bottom right floating buttons (the ones circled) */
+.st-emotion-cache-zq5wmm {display: none !important;}
+.st-emotion-cache-1wbqy5l {display: none !important;}
+[class*="StatusWidget"] {display: none !important;}
+[class*="viewerBadge"] {display: none !important;}
+#GithubIcon {display: none !important;}
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
 html, body, [class*="css"] { font-family: 'Inter', sans-serif; }
 
