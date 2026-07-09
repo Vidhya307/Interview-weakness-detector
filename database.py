@@ -4,7 +4,11 @@ import json
 import os
 from datetime import datetime
 
-DB_PATH = os.path.join("/tmp", "interview_coach.db")
+# Works on both Windows (local) and Linux (Streamlit Cloud)
+if os.name == 'nt':  # Windows
+    DB_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "interview_coach.db")
+else:  # Linux / Streamlit Cloud
+    DB_PATH = "/tmp/interview_coach.db"
 
 def get_conn():
     conn = sqlite3.connect(DB_PATH)
